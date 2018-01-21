@@ -9,11 +9,11 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 group :development, :test do
- gem 'sqlite3'
+  gem 'sqlite3'
 end
 group :production do
- gem 'pg', '~> 0.20'
- gem 'rails_12factor'
+  gem 'pg', '~> 0.20'
+  gem 'rails_12factor'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
