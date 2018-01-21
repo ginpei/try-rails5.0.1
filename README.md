@@ -1,24 +1,30 @@
-# README
+# Build docker image
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```console
+$ docker build -t heroku-rails .
+```
 
-Things you may want to cover:
+# Start server
 
-* Ruby version
+```console
+$ docker run --name xx -d --rm -v `pwd`:/app -p 3000:3000 heroku-rails
+142a5ccdae1619a25d02878bacade19c19a03323ff6d38df86c7b49061fe68fd
+$ docker stop xx
+```
 
-* System dependencies
+## Windows
 
-* Configuration
+Replace `` `pwd` `` with `%CD%`.
 
-* Database creation
+```console
+> docker run --name xx -d --rm -v %CD%:/app -p 3000:3000 heroku-rails
+142a5ccdae1619a25d02878bacade19c19a03323ff6d38df86c7b49061fe68fd
+> docker stop xx
+```
 
-* Database initialization
+# CLI
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```console
+$ docker run -d --rm -v `pwd`:/app heroku-rails rake db:migrate
+$ docker run -d --rm -v `pwd`:/app heroku-rails rails g controller misc home
+```

@@ -1,0 +1,30 @@
+<style>
+.container {
+	align-items: center;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+.message {
+	color: #fff;
+}
+.photo-author {
+	bottom: 0;
+	padding: 1rem;
+	position: absolute;
+	right: 0;
+}
+.photo-author > a {
+	color: #fff;
+}
+</style>
+<div class="container" style="background-image: url('<%= asset_path 'kitten.jpg' %>')">
+	<h1 class="message">Hello World!</h1>
+</div>
+<div class="photo-author"><a href="https://www.flickr.com/photos/janewilliams/9301062563">Photo by Jane Williams</a></div>
